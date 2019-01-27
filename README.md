@@ -34,6 +34,10 @@ Enemies move across the landscape attempting to prevent the player from progress
 - Hitting enemies will **decrease current level** and reset player position.
 - Enemy **positions randomize** after they cross the screen.
 
+## Requirements
+
+Your current browser must atleast support ECMAScript 6
+
 ## Contributing
 
 Base project code and assets came from a [Starter Code](https://github.com/udacity/frontend-nanodegree-arcade-game)
