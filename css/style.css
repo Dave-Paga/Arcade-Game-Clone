@@ -1,0 +1,9 @@
+body {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.level {
+    padding-top: 0.5em;
+    font-size: 3em;
+}
