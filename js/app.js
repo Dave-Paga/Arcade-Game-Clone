@@ -2,7 +2,7 @@
 class Enemy {
     constructor(speed) {
         this.x = -150;
-        this.width = 50;
+        this.width = 75;
         this.height = 30;
         this.y = this.laneSwitch();
         this.sprite = 'images/enemy-bug.png';
@@ -37,7 +37,7 @@ class Player {
     constructor() {
         this.x = 200;
         this.y = 370;
-        this.width = 50;
+        this.width = 75;
         this.height = 30;
         this.sprite = 'images/char-boy.png';
         this.isColliding = false;
@@ -96,7 +96,7 @@ class Player {
 /// manages enemy speed and level number
 class Changelvl {
     constructor() {
-        this._easy = [ 100, 200, 500 ];
+        this._easy = [ 100, 200, 400 ];
         this._medium = [ 200, 400, 800 ];
         this._hard = [ 400, 600, 1000 ];
         this._level = 1;
@@ -116,7 +116,7 @@ class Changelvl {
     _easyChange() {
         this._diff = 'Easy';
 
-        for (let x = 0; x <= 2; x++) {
+        for (let x = 0; x <= allEnemies.length - 1; x++) {
             allEnemies[x].speed = this._easy[x];
         }
     }
@@ -124,7 +124,7 @@ class Changelvl {
     _mediumChange() {
         this._diff = 'Medium';
 
-        for (let x = 0; x <= 2; x++) {
+        for (let x = 0; x <= allEnemies.length - 1; x++) {
             allEnemies[x].speed = this._medium[x];
         }
     }
@@ -132,7 +132,7 @@ class Changelvl {
     _hardChange() {
         this._diff = 'Hard';
 
-        for (let x = 0; x <= 2; x++) {
+        for (let x = 0; x <= allEnemies.length - 1; x++) {
             allEnemies[x].speed = this._hard[x];
         }
     }
@@ -205,7 +205,7 @@ class Changelvl {
 
 const allEnemies = [ enemy1, enemy2, enemy3 ];
 
-/// Checks collisions on enemies and water for the player
+/// Checks collisions on enemies and water for the player. This is uncommented in resources.js and therefore called
 function checkCollisions() {
     for (x = 0; x < allEnemies.length; x++) {
         if (player.x < allEnemies[x].x + allEnemies[x].width  && player.x + player.width  > allEnemies[x].x &&
