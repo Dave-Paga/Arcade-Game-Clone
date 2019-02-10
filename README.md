@@ -40,4 +40,4 @@ Your current browser must atleast support ECMAScript 6
 
 ## Contributing
 
-Base project code and assets came from a [Starter Code](https://github.com/udacity/frontend-nanodegree-arcade-game)
+Code and assets was built from a [Udacity Student Project](https://github.com/udacity/frontend-nanodegree-arcade-game).
